@@ -11,7 +11,19 @@
 	<!-- <h3 style = "text-align: center;"> 305-781-1877 | norberto.merani@gmail.com | <a href = "https://github.com/normeni"> GitHub </a> | <a href = "https://www.linkedin.com/in/norberto-merani-60425a186/"> LinkedIn </a> </h3> -->
 
 
-  <script src="index.js"></script>
+    <p id="userCount"></p>
+
+  <script>
+    window.onload = async function() {
+      const response = await fetch('https://a25714b3o5.execute-api.us-east-1.amazonaws.com/default/userCountFunction');
+      const data = await response.text();
+      
+      const userCountElement = document.getElementById('userCount');
+      if (userCountElement) {
+        userCountElement.textContent = `User Count: ${data.userCount}`; // Adjust based on your API response structure
+      }
+    };
+  </script>
 
 
 	<h2> Education </h2>
