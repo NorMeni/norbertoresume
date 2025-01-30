@@ -10,6 +10,20 @@
     <h1 style = "text-align: center;">Norberto Merani</h1>
 	<!-- <h3 style = "text-align: center;"> 305-781-1877 | norberto.merani@gmail.com | <a href = "https://github.com/normeni"> GitHub </a> | <a href = "https://www.linkedin.com/in/norberto-merani-60425a186/"> LinkedIn </a> </h3> -->
 
+
+<pre id="userCountBlock">Loading...</pre>
+
+  <script src="index.js"></script>
+
+  <script>
+    window.onload = async () => {
+      await userAction();  // Call the userAction function from index.js
+      document.getElementById('userCountBlock').textContent = `Number: ${window.userCount}`;  // Display the userCount value
+    };
+  </script>
+
+
+
 	<h2> Education </h2>
 		<b> Florida International University </b> <p> 2019 - December 2023 </p>
 		<p> BA in Computer Science, GPA 3.18 </p>
