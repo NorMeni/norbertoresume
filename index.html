@@ -8,19 +8,21 @@
 </head>
 <body>
     <h1 style = "text-align: center;">Norberto Merani</h1>
-	<!-- <h3 style = "text-align: center;"> 305-781-1877 | norberto.merani@gmail.com | <a href = "https://github.com/normeni"> GitHub </a> | <a href = "https://www.linkedin.com/in/norberto-merani-60425a186/"> LinkedIn </a> </h3> -->
 
-	<p> version 1 </p>
+	<p id="counter"> Total number of visitors </p>
     <p id="userCount"></p>
 
+
   <script>
-     window.onload = async function() {
-      const response = await fetch('https://a25714b3o5.execute-api.us-east-1.amazonaws.com/default/userCountFunction');
-      const data = await response.json();
-      //console.log(data.body);
-      document.getElementById("userCount").innerHTML = data.body;
-    }; 
-	
+	//these 2 lines of code grab the visitor count and display it in HTML
+	fetch('https://a25714b3o5.execute-api.us-east-1.amazonaws.com/default/userCountFunction')
+	.then(data => {
+	return data.json();
+})
+	.then(post => {
+	document.getElementById("userCount").innerHTML = post.body;
+});
+
   </script>
 
 
@@ -35,17 +37,26 @@
 	<li> Educated up to 20-30 FIU students per month, providing assistance in computer science subjects. </li>
 
 	<h2> Skills </h2>
-	<p> Programming: Java, Python, C, SQL </p>
+	<p> Programming: Java, Python, C, JS </p>
 	<p> Web Development: HTML, Django, Bootstrap, React </p>
 	<p> Tools: Git, Visual Studio, VS Code, IntelliJ, Android Studio </p>
 	<p> Database: PostgreSQL </p>
-	<p> Other: Excel/Word, ChatGPT </p>
+	<p> Cloud: AWS </p>
 
 	<h2> Projects </h2>
 	<b> ASI Portal Development Team </b>
 	<p> August 2022 - August 2023 </p>
 	<li> Oversaw portal site development updates, utilizing frameworks for full stack development. </li>
 	<li> Generated SQL queries to report statistics on students tutored every month. </li>
+	
+	<br>
+
+	<b><a href="https://github.com/NorMeni/norbertoresume">Resume Site</a> </b>
+	<p> December 2024 - Current </p>
+	<li> Deployed a static site on <b>S3</b> and automated deployment using <b>Github Actions</b> and <b>CodePipeline</b>. </li>
+	<li> Implemented a dynamic visitor counter that sends a request to <b>API Gateway</b> to trigger a <b>Lambda</b> function in order to update a <b>DynamoDB</b> table, gaining experience in full-stack programming.
+	
+	<br>
 
 
 </body>
