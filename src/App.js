@@ -25,7 +25,7 @@ function App() {
         <b> Florida International University </b> <p> 2019 - December 2023 </p>
         <p> BS in Computer Science, GPA 3.18 </p>
         <h2> Work </h2>
-        <b> Web Developer/Tutor </b>
+        <b> Tutor/Web Developer </b>
         <p> August 2022 - August 2023 </p>
         <li> Collaboratively managed the <a href="https://asi.cs.fiu.edu/">ASI Portal site</a> using Django and Git. </li>
         <li> Entered SQL queries to generate reports on the average number of students using our tutoring service on a biweekly basis. </li>
