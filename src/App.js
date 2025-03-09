@@ -22,7 +22,7 @@ function App() {
         <p id="counter"> Total number of visitors </p>
         <p id="visitorCount" > {visitorCount} </p>
         <h2> Education </h2>
-        <b> Florida International University </b> <p> 2019 - December 2023 </p>
+        <b> Florida International SCHOOL</b> <p> 2019 - December 2023 </p>
         <p> BS in Computer Science, GPA 3.18 </p>
         <h2> Work </h2>
         <b> Tutor/Web Developer </b>
