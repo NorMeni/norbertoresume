@@ -28,6 +28,6 @@ jobs:
         aws-region: us-east-1
     
     - name: Sync Build Folder to S3
-      run: cd src & aws s3 sync . s3://norbertoresume.com
+      run: cd src/ & aws s3 sync . s3://norbertoresume.com
     - name: Invalidate CloudFront Cahe
       run: aws cloudfront create-invalidation --distribution-id E68EY47NY33A9 --paths "/*"
