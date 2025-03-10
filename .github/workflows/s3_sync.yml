@@ -29,3 +29,5 @@ jobs:
     
     - name: Sync Build Folder to S3
       run: aws s3 sync ./build s3://norbertoresume.com --delete
+    - name: Invalidate CloudFront Cahe
+      run: aws cloudfront create-invalidation --distribution-id I3BNWLG5PI57HYW5WP7ETK312D --paths “/*”
